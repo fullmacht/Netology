@@ -26,9 +26,9 @@ plt.show()
 
 
 clf = KMeans()
-clusters =clf.fit_predict(data, )
+clusters =clf.fit_predict(x_scaled, )
 
-plt.scatter(x_scaled[:,0],x_scaled[:,1],c=clusters, cmap='autumn', s=60, label='С голосами')
+plt.scatter(x_scaled[:,0],x_scaled[:,1],c=y, cmap='autumn', s=60, label='С голосами')
 plt.legend()
 plt.show()
 
