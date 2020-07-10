@@ -42,7 +42,7 @@ LogisticRegression())
 
 classifier.fit(x,y)
 
-pd.Series(classifier.final_estimator_.coef_.flatten(),
-          index=classifier.named_estimators_.keys()).plot(kind='barh')
+plt.plot(classifier.final_estimator_.coef_.flatten(),classifier.named_estimators_.keys())
+plt.show()
 
 
