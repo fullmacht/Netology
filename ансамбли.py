@@ -34,7 +34,7 @@ print(imp.sort_values(ascending=False))
 
 
 classifier = StackingClassifier(
-    [   ('knn',RandomForestClassifier()),
+    [   ('rf',RandomForestClassifier()),
         ('lr', LogisticRegression()),
         ('dt', DecisionTreeClassifier())
     ],
