@@ -17,3 +17,14 @@ print(data[ pd.isnull( data['height'] ) ].head())
 
 # Вывод количества пропущенных значений в стобце 'height'
 print('Для height пустых строк ' + str( len( data[ pd.isnull( data['height'] ) ] ) ))
+
+from sklearn.preprocessing import LabelEncoder, OneHotEncoder
+le = LabelEncoder()
+ohe = OneHotEncoder()
+
+ft = ohe.fit_transform(data[['nationality', 'height', 'weight',
+ 'sport', 'gold', 'silver', 'bronze']])
+
+
+Xshort = pd.get_dummies( data.loc[ :, ['age', 'children'] ],
+ columns = ['age', 'children'] )
