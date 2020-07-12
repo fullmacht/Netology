@@ -19,8 +19,10 @@ print(data[ pd.isnull( data['height'] ) ].head())
 print('Для height пустых строк ' + str( len( data[ pd.isnull( data['height'] ) ] ) ))
 
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder
-le = LabelEncoder()
 ohe = OneHotEncoder()
+lbe = LabelEncoder()
+
+y = lbe.fit_transform(y)
 
 ft = ohe.fit_transform(data[['nationality', 'height', 'weight',
  'sport', 'gold', 'silver', 'bronze']])
@@ -28,3 +30,9 @@ ft = ohe.fit_transform(data[['nationality', 'height', 'weight',
 
 Xshort = pd.get_dummies( data.loc[ :, ['age', 'children'] ],
  columns = ['age', 'children'] )
+
+
+from sklearn.metrics import roc_curve
+fpr, tpr, thresholds = roc_curve(y_test,y_pred[:,1])
+plt.plot( fpr, tpr )
+plt.show()

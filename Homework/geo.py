@@ -62,17 +62,3 @@ k_opt = ks[np.argmin(diff_r)+1]
 print(k_opt)
 
 
-# fig, axes = plt.subplots(1, 5, figsize=(15, 2))
-# alpha = 0.3
-# axes[0].scatter(X_scaled[:, 0], X_scaled[:, 1], c=clusters_random, cmap='autumn', s=60, alpha=alpha)
-# axes[0].set_title(get_descr("Random", y, clusters_random, X_scaled))
-# for ax, algorithm in zip(axes[1:], algorithms):
-#     # кластеризуем и выводим картинку
-#     clusters = algorithm.fit_predict(X_scaled)
-#     ax.scatter(X_scaled[:, 0], X_scaled[:, 1], c=clusters, cmap='autumn', s=60, alpha=alpha)
-#     ax.set_title(get_descr(algorithm.__class__.__name__, y, clusters, X_scaled))
-
-#     # если есть центры кластеров - выведем их
-#     if algorithm.__class__.__name__ in {'KMeans', 'AffinityPropagation'}:
-#         centers = algorithm.cluster_centers_
-#         ax.scatter(centers[:, 0], centers[:, 1], s=50)
