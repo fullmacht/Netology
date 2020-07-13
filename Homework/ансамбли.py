@@ -7,7 +7,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 
 
-df_train = pd.read_csv(r'C:\Users\laptop\PycharmProjects\des_tree_clf_titanik\data\train.csv')
+df_train = pd.read_csv(r'C:\Users\pc\Desktop\PycharmProjects\Homework\Homework\data\train.csv')
 total = df_train.isnull().sum().sort_values(ascending=False)
 percent = (df_train.isnull().sum()/df_train.isnull().count()).sort_values(ascending=False)
 missing_data = pd.concat([total, percent], axis=1, keys=['Total', 'Percent'])
