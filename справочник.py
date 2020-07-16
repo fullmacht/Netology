@@ -27,6 +27,19 @@ y = lbe.fit_transform(y)
 ft = ohe.fit_transform(data[['nationality', 'height', 'weight',
  'sport', 'gold', 'silver', 'bronze']])
 
+# Или
+
+x = df_train.drop(['SalePrice','Id'],axis=1)
+y = df_train['SalePrice']
+
+ohe = OneHotEncoder()
+l = list(x)
+m = []
+for i in l:
+    if x[i].dtypes == 'object':
+        m.append(i)
+ft_x = ohe.fit_transform(x[m])
+
 
 Xshort = pd.get_dummies( data.loc[ :, ['age', 'children'] ],
  columns = ['age', 'children'] )
