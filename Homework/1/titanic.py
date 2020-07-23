@@ -9,7 +9,7 @@ from matplotlib import pyplot as plt
 
 
 
-titanic = pd.read_csv('data/titanic.csv')
+titanic = pd.read_csv('../data/titanic.csv')
 # FE
 
 

@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn import preprocessing
 
 
-titanic = pd.read_csv('data/titanic.csv')
+titanic = pd.read_csv('../data/titanic.csv')
 # FE
 
 

@@ -16,7 +16,7 @@ pd.set_option('display.width', desired_width)
 # np.set_printoption(linewidth=desired_width)
 pd.set_option('display.max_columns',30)
 
-data = pd.read_csv(r'C:\Users\pc\PycharmProjects\Netology\Homework\data\adult.csv')
+data = pd.read_csv(r'/Homework/data/adult.csv')
 y = data['income']
 x = data.drop('income',axis=1)
 x = pd.get_dummies(x)
