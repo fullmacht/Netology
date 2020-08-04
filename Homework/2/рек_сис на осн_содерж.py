@@ -53,7 +53,7 @@ for movie, group in data.groupby('title'):
     gen()
     tag_strings.append(' '.join([str(s).replace(' ', '').replace('-', '') for s in group.tag.values]))
     movies.append(movie)
-
+a
 from sklearn.feature_extraction.text import TfidfTransformer, CountVectorizer
 cv = CountVectorizer()
 genres_vec = cv.fit_transform(movie_genres)
