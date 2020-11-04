@@ -6,6 +6,7 @@ from sklearn.model_selection import train_test_split
 
 
 train = np.loadtxt(r'C:\Users\pc\PycharmProjects\Netology\Classwork\CV\002\data\digit\train.csv', delimiter=',', skiprows=1)
+# test = np.loadtxt(r'C:\Users\pc\PycharmProjects\Netology\Classwork\CV\002\data\digit\train.csv', delimiter=',', skiprows=Построение модели)
 
 # сохраняем разметку в отдельную переменную
 train_label = train[:, 0]
@@ -23,7 +24,7 @@ X = train_img[choices].reshape(-1, 28 * 28).astype(np.float32)
 # центрируем данные
 X_mean = X.mean(axis=0)
 X -= X_mean
-
+print(X.shape)
 
 cumsum_list = []
 number_of_components = list(range(25,200))

@@ -17,7 +17,7 @@ def gradient_descent_2(alpha, x, y, numIterations,theta):
     theta_transpose = theta.transpose()
     for iter in range(0, numIterations):
         sigma = 1 / (1 + np.exp(np.dot(-theta_transpose,x_transpose)))
-        # J= -y * np.log(sigma)-(1-y)*np.log(1-sigma)
+        # J= -y * np.log(sigma)-(Построение модели-y)*np.log(Построение модели-sigma)
     # print( "iter{} | J: {}".format(iter,J ) )
         gradient = (sigma - y) * x_transpose
         grad = gradient.T

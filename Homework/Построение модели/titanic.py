@@ -27,7 +27,7 @@ lgr.fit(X_train,y_train)
 Y_pred_proba = lgr.predict_proba(X_test)
 
 fpr, tpr, _ = metrics.roc_curve(y_test,  Y_pred_proba[: ,1])
-plt.plot(fpr,tpr,label="data 1")
+plt.plot(fpr,tpr,label="data Построение модели")
 plt.legend(loc=4)
 plt.show()
 
@@ -38,7 +38,7 @@ dtclf.fit(X_train,y_train)
 Y_pred_proba = dtclf.predict_proba(X_test)
 
 fpr, tpr, _ = metrics.roc_curve(y_test,  Y_pred_proba[: ,1])
-plt.plot(fpr,tpr,label="data 1")
+plt.plot(fpr,tpr,label="data Построение модели")
 plt.legend(loc=4)
 plt.show()
 
@@ -52,7 +52,7 @@ Y_pred_proba = knn.predict_proba(X_test)
 
 
 fpr, tpr, _ = metrics.roc_curve(y_test,  Y_pred_proba[: ,1])
-plt.plot(fpr,tpr,label="data 1")
+plt.plot(fpr,tpr,label="data Построение модели")
 plt.legend(loc=4)
 plt.show()
 

@@ -1,6 +1,4 @@
-import operator
-d = {1:2,2:4}
-m = (min(d.items(), key=operator.itemgetter(1))[0])
-print('min rmse{} - k{}'.format(d[m],m))
-
-
+b = (2,3,5,1)
+import numpy as np
+print(np.argmax(b))
+print(sorted(b,reverse=True))

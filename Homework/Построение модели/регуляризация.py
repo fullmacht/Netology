@@ -64,7 +64,7 @@ LR.fit(x_train,y_train)
 y_pred = LR.predict_proba(x_test)
 
 fpr, tpr, thresholds = roc_curve(y_test,y_pred[:,1])
-plt.plot( fpr, tpr, label= 'LR l2 c=0.1' )
+plt.plot( fpr, tpr, label= 'LR l2 c=0.Построение модели' )
 plt.legend()
 plt.show()
 
